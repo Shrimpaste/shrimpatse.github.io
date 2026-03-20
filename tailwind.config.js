@@ -55,7 +55,43 @@ export default {
           '100%': { boxShadow: '0 0 20px rgba(245, 158, 11, 0.6)' },
         },
       },
+      spacing: {
+        'safe-top': 'env(safe-area-inset-top)',
+        'safe-bottom': 'env(safe-area-inset-bottom)',
+        'safe-left': 'env(safe-area-inset-left)',
+        'safe-right': 'env(safe-area-inset-right)',
+      },
+      padding: {
+        'safe': 'env(safe-area-inset-bottom)',
+      },
+      minHeight: {
+        'touch': '44px',
+      },
+      minWidth: {
+        'touch': '44px',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.touch-manipulation': {
+          'touch-action': 'manipulation',
+        },
+        '.tap-highlight-transparent': {
+          '-webkit-tap-highlight-color': 'transparent',
+        },
+        '.pb-safe': {
+          'padding-bottom': 'env(safe-area-inset-bottom)',
+        },
+        '.pt-safe': {
+          'padding-top': 'env(safe-area-inset-top)',
+        },
+        '.px-safe': {
+          'padding-left': 'env(safe-area-inset-left)',
+          'padding-right': 'env(safe-area-inset-right)',
+        },
+      });
+    },
+  ],
 }

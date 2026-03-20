@@ -21,10 +21,10 @@ export function PostCard({ post, index = 0 }: PostCardProps) {
     >
       <Link
         to={`/blog/${post.slug}`}
-        className="group block p-6 -mx-6 rounded-xl transition-all duration-300 hover:bg-ink-800/50"
+        className="group block p-4 sm:p-6 -mx-2 sm:-mx-6 rounded-xl transition-all duration-300 hover:bg-ink-800/50 active:bg-ink-800/70 active:scale-[0.99] touch-manipulation"
       >
         {/* Meta */}
-        <div className="flex items-center gap-4 text-xs text-text-muted font-mono mb-3">
+        <div className="flex items-center gap-3 sm:gap-4 text-xs text-text-muted font-mono mb-3">
           <span className="flex items-center gap-1.5">
             <Calendar size={12} />
             {post.date}
@@ -36,7 +36,7 @@ export function PostCard({ post, index = 0 }: PostCardProps) {
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-serif text-text-primary mb-2 group-hover:text-amber-400 transition-colors duration-300">
+        <h3 className="text-lg sm:text-xl font-serif text-text-primary mb-2 group-hover:text-amber-400 transition-colors duration-300 leading-snug">
           {post.title}
           <ArrowUpRight
             size={16}
@@ -79,13 +79,13 @@ export function PostCardCompact({ post, index = 0 }: PostCardCompactProps) {
     >
       <Link
         to={`/blog/${post.slug}`}
-        className="group flex items-start gap-4 py-3 border-b border-ink-700/50 last:border-0 hover:pl-2 transition-all duration-300"
+        className="group flex items-start gap-3 sm:gap-4 py-3 border-b border-ink-700/50 last:border-0 hover:pl-2 transition-all duration-300 active:bg-ink-800/30 active:rounded-lg active:px-2 touch-manipulation"
       >
-        <span className="text-xs text-text-muted font-mono mt-1 shrink-0 w-20">
+        <span className="text-xs text-text-muted font-mono mt-1 shrink-0 w-16 sm:w-20">
           {post.date}
         </span>
         <div className="flex-1 min-w-0">
-          <h4 className="text-sm text-text-primary group-hover:text-amber-400 transition-colors truncate">
+          <h4 className="text-sm text-text-primary group-hover:text-amber-400 transition-colors truncate leading-snug">
             {post.title}
           </h4>
         </div>

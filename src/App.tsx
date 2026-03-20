@@ -1,8 +1,7 @@
 import { HashRouter as Router, Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect } from 'react';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import { Header, Footer, BottomNav } from './components';
 import { Home } from './pages/Home';
 import { BlogList } from './pages/BlogList';
 import { PostDetail } from './pages/PostDetail';
@@ -46,7 +45,7 @@ function AppContent() {
     <div className="min-h-screen bg-ink-900 paper-texture">
       <ScrollToTop />
       <Header />
-      <main className="relative border-t border-ink-900">
+      <main className="relative border-t border-ink-900 pb-safe">
         <Routes>
           <Route
             path="/"
@@ -83,6 +82,7 @@ function AppContent() {
         </Routes>
       </main>
       <Footer />
+      <BottomNav />
     </div>
   );
 }
