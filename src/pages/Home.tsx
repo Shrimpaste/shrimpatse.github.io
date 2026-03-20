@@ -12,7 +12,7 @@ export function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <section className="min-h-[85vh] sm:min-h-[90vh] md:min-h-[95vh] flex items-center justify-center px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
+      <section className="min-h-[85vh] sm:min-h-[90vh] md:min-h-[95vh] flex items-center justify-center px-4 sm:px-6 pt-24 md:pt-20 lg:pt-16 pb-12 sm:pb-16 md:pb-20">
         <div className="max-w-4xl mx-auto w-full">
           {/* Terminal Intro */}
           <motion.div
